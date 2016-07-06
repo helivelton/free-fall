@@ -5,7 +5,7 @@ $(document).ready(function () {
 
     $("#vel-inicial").val(600);
     $("#angulo").val(1.1);
-    $("#coeficiente").valueOf(0.2);
+    $("#coeficiente").val(0.2);
 
     var tempo = 0.0;
     //document.writeln(tempo);
