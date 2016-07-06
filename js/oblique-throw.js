@@ -3,6 +3,9 @@
  */
 $(document).ready(function () {
 
+    $("#vel-inicial").val(600);
+    $("#angulo").val(1.1);
+    $("#coeficiente").valueOf(0.2);
 
     var tempo = 0.0;
     //document.writeln(tempo);
@@ -21,12 +24,19 @@ $(document).ready(function () {
 
     alert("TESTE2!!!!");
 
-    var ctx = $("#myCanvas").getContext("2d");
-    ctx.fillStyle = "#FF0000";
-    ctx.fillRect(0,0,150,75);
+
+    var ctx = $("#myCanvas").get(0).getContext('2d');
+
+
+    ctx.fillStyle = "#000000"
+    //ctx.fillStyle = "rgb(200,0,0)";
+
+
+    //canvas.fillRect(0,0,1,1);
+
 
     alert("TESTE3!!!!");
-    var cord = 0;
+    var cord = 10;
 
     while(posicaoy > 0) {
         tempo += 0.25;
@@ -39,9 +49,9 @@ $(document).ready(function () {
         posicaox = (velinicialx / $("#coeficiente").val()) * repeat;
 
         posicaoy = ( (-(gravidade * tempo)) / $("#coeficiente").val()) + (($("#coeficiente").val() * velinicialy + gravidade) / ($("#coeficiente").val() * $("#coeficiente").val())) * repeat;
-        //document.write(posicaox);
-        //$("#resultado").innerHTML = posicaox
-        ctx.fillRect(cord,cord,1,1);
+
+        ctx.fillRect( cord,cord,100,100);
+        alert("OK");
 
     }
 
