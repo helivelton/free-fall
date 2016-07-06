@@ -3,7 +3,7 @@
  */
 $(document).ready(function () {
 
-    $("#vel-inicial").val(60);
+    $("#vel-inicial").val(600);
     $("#angulo").val(1.1);
     $("#coeficiente").val(0.2);
 
@@ -50,7 +50,7 @@ $(document).ready(function () {
 
         posicaoy = ( (-(gravidade * tempo)) / $("#coeficiente").val()) + (($("#coeficiente").val() * velinicialy + gravidade) / ($("#coeficiente").val() * $("#coeficiente").val())) * repeat;
 
-        ctx.fillRect( Math.round(posicaox),Math.round(posicaoy),10,10);
+        ctx.fillRect( Math.round(posicaox),Math.round(posicaoy),1,1);
         alert("OK");
 
     }
