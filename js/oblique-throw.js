@@ -3,7 +3,7 @@
  */
 $(document).ready(function () {
 
-    $("#vel-inicial").val(600);
+    $("#vel-inicial").val(60);
     $("#angulo").val(1.1);
     $("#coeficiente").val(0.2);
 
