@@ -50,7 +50,7 @@ $(document).ready(function () {
 
         posicaoy = ( (-(gravidade * tempo)) / $("#coeficiente").val()) + (($("#coeficiente").val() * velinicialy + gravidade) / ($("#coeficiente").val() * $("#coeficiente").val())) * repeat;
 
-        ctx.fillRect( Math.round(posicaox),Math.round(posicaox),10,10);
+        ctx.fillRect( Math.round(posicaox),Math.round(posicaoy),10,10);
         alert("OK");
 
     }
