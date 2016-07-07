@@ -101,9 +101,26 @@
 
                             <!-- Text input-->
                             <div class="form-group">
-                                <label class="col-md-4 control-label" for="coeficiente">Coeficiente</label>
+                                <label class="col-md-4 control-label" for="coeficiente">Coeficiente 1</label>
                                 <div class="col-md-4">
                                     <input id="coeficiente" name="coeficiente" type="number" step="0.01" placeholder="" class="form-control input-md">
+
+                                </div>
+                                </div>
+
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="coeficiente2">Coeficiente 2</label>
+                                <div class="col-md-4">
+                                    <input id="coeficiente2" name="coeficiente2" type="number" step="0.01" placeholder="" class="form-control input-md">
+
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label class="col-md-4 control-label" for="coeficiente3">Coeficiente 3</label>
+                                <div class="col-md-4">
+                                    <input id="coeficiente3" name="coeficiente3" type="number" step="0.01" placeholder="" class="form-control input-md">
 
                                 </div>
                             </div>
@@ -111,13 +128,14 @@
                             <div class="form-group">
                                 <label class="col-md-4 control-label" for="singlebutton"></label>
                                 <div class="col-md-4">
-                                    <button id="singlebutton" name="singlebutton"  class="btn btn-success">Enviar</button>
+                                    <button id="cancelbutton" type="button" name="cancelbutton"  class="btn">Cancel</button>
+                                    <button id="singlebutton" type="button" name="singlebutton"  class="btn">Enviar</button>
                                 </div>
                             </div>
 
                             <div class="form-group" id="resultado" name="resultado">
                                 <label class="col-md-4 control-label" >Result</label>
-                                <canvas id="myCanvas" width="2000" height="1000" style="border:1px solid #000000;">
+                                <canvas id="myCanvas" width="1000" height="300" style="border:1px solid #000000;">
 
 
                                 </canvas>
