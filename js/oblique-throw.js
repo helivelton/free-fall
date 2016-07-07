@@ -38,7 +38,7 @@ $("#singlebutton").click(function () {
 
     if ($("#coeficiente").val() != 0) {
         while (posicaoy > 0) {
-            tempo += 0.001;
+            tempo += 0.005;
 
 
             //document.writeln(tempo);
@@ -59,7 +59,7 @@ $("#singlebutton").click(function () {
         }
     } else {
         while (posicaoy > 0) {
-            tempo += 0.001;
+            tempo += 0.005;
             posicaox = velinicialx * tempo;
             posicaoy = (-(gravidade) * tempo * tempo) / 2 + velinicialy * tempo;
 
@@ -81,7 +81,7 @@ $("#singlebutton").click(function () {
     tempo = 0.0;
 
     while(posicaoy > 0) {
-        tempo += 0.001;
+        tempo += 0.005;
 
 
         //document.writeln(tempo);
@@ -108,7 +108,7 @@ $("#singlebutton").click(function () {
     tempo = 0.0;
 
     while(posicaoy > 0) {
-        tempo += 0.001;
+        tempo += 0.005;
 
 
         //document.writeln(tempo);
