@@ -36,6 +36,49 @@ $("#singlebutton").click(function () {
 
     //canvas.fillRect(0,0,1,1);
 
+    if ($("#coeficiente").val() != 0) {
+        while (posicaoy > 0) {
+            tempo += 0.001;
+
+
+            //document.writeln(tempo);
+
+            var repeat = (1 - Math.pow(Math.E, -($("#coeficiente").val() * tempo )));
+
+            posicaox = (velinicialx / $("#coeficiente").val()) * repeat;
+
+            posicaoy = ( (-(gravidade * tempo)) / $("#coeficiente").val()) + (($("#coeficiente").val() * velinicialy + gravidade) / ($("#coeficiente").val() * $("#coeficiente").val())) * repeat;
+
+            if ($("#vel-inicial").val() > 100) {
+                posicaox = posicaox / 50;
+                posicaoy = posicaoy / 50;
+            }
+            ctx.fillRect(Math.round(posicaox), (300 - Math.round(posicaoy)), 1, 1);
+
+
+        }
+    } else {
+        while (posicaoy > 0) {
+            tempo += 0.001;
+            posicaox = velinicialx * tempo;
+            posicaoy = (-(gravidade) * tempo * tempo) / 2 + velinicialy * tempo;
+
+            if ($("#vel-inicial").val() > 100) {
+                posicaox = posicaox / 50;
+                posicaoy = posicaoy / 50;
+            }
+            ctx.fillRect(Math.round(posicaox), (300 - Math.round(posicaoy)), 1, 1);
+
+
+        }
+
+
+    }
+
+    ctx.fillStyle = "#FF0000";
+    posicaox = 0.0;
+    posicaoy = 0.1;
+    tempo = 0.0;
 
     while(posicaoy > 0) {
         tempo += 0.001;
@@ -43,28 +86,47 @@ $("#singlebutton").click(function () {
 
         //document.writeln(tempo);
 
-        var repeat = (1 - Math.pow(Math.E, -($("#coeficiente").val() * tempo )));
+        var repeat = (1 - Math.pow(Math.E, -($("#coeficiente2").val() * tempo )));
 
-        posicaox = (velinicialx / $("#coeficiente").val()) * repeat;
+        posicaox = (velinicialx / $("#coeficiente2").val()) * repeat;
 
-        posicaoy = ( (-(gravidade * tempo)) / $("#coeficiente").val()) + (($("#coeficiente").val() * velinicialy + gravidade) / ($("#coeficiente").val() * $("#coeficiente").val())) * repeat;
+        posicaoy = ( (-(gravidade * tempo)) / $("#coeficiente2").val()) + (($("#coeficiente2").val() * velinicialy + gravidade) / ($("#coeficiente2").val() * $("#coeficiente2").val())) * repeat;
 
         if ($("#vel-inicial").val() > 100 )
         {
-            posicaox = posicaox/30;
-            posicaoy = posicaoy/30;
+            posicaox = posicaox/50;
+            posicaoy = posicaoy/50;
         }
         ctx.fillRect( Math.round(posicaox),(300  - Math.round(posicaoy)),1,1);
 
 
     }
 
+    ctx.fillStyle = "#FFFF00";
+    posicaox = 0.0;
+    posicaoy = 0.1;
+    tempo = 0.0;
 
+    while(posicaoy > 0) {
+        tempo += 0.001;
+
+
+        //document.writeln(tempo);
+
+        var repeat = (1 - Math.pow(Math.E, -($("#coeficiente3").val() * tempo )));
+
+        posicaox = (velinicialx / $("#coeficiente3").val()) * repeat;
+
+        posicaoy = ( (-(gravidade * tempo)) / $("#coeficiente3").val()) + (($("#coeficiente3").val() * velinicialy + gravidade) / ($("#coeficiente3").val() * $("#coeficiente3").val())) * repeat;
+
+        if ($("#vel-inicial").val() > 100 )
+        {
+            posicaox = posicaox/50;
+            posicaoy = posicaoy/50;
+        }
+        ctx.fillRect( Math.round(posicaox),(300  - Math.round(posicaoy)),1,1);
+
+
+    }
 
 });
-
-function () {
-
-
-
-}
