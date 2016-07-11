@@ -43,6 +43,11 @@ $("#button1").click(function () {
     }
 
     if ($("#coeficiente").val() != 0) {
+<<<<<<< HEAD
+=======
+        while (posicaoy > 0) {
+            tempo += 0.005;
+>>>>>>> 4d4d2e1384b2393fef074229ac0038c44573eb91
 
         while (posicaoy > 0) {
             tempo += 0.03;
@@ -66,7 +71,11 @@ $("#button1").click(function () {
 
     } else {
         while (posicaoy > 0) {
+<<<<<<< HEAD
             tempo += 0.03;
+=======
+            tempo += 0.005;
+>>>>>>> 4d4d2e1384b2393fef074229ac0038c44573eb91
             posicaox = velinicialx * tempo;
             posicaoy = (-(gravidade) * tempo * tempo) / 2 + velinicialy * tempo;
 
@@ -135,7 +144,11 @@ $("#button2").click(function () {
     }
 
     while(posicaoy > 0) {
+<<<<<<< HEAD
         tempo += 0.03;
+=======
+        tempo += 0.005;
+>>>>>>> 4d4d2e1384b2393fef074229ac0038c44573eb91
 
 
         //document.writeln(tempo);
@@ -209,7 +222,11 @@ $("#button3").click(function () {
     }
 
     while(posicaoy > 0) {
+<<<<<<< HEAD
         tempo += 0.03;
+=======
+        tempo += 0.005;
+>>>>>>> 4d4d2e1384b2393fef074229ac0038c44573eb91
 
 
         //document.writeln(tempo);
